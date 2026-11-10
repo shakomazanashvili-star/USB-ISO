@@ -1,0 +1,78 @@
+{
+  "entities": {
+    "Panel": {
+      "title": "Panel",
+      "description": "Electrical distribution board design",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the panel"
+        },
+        "userId": {
+          "type": "string",
+          "description": "User ID of the panel creator"
+        },
+        "name": {
+          "type": "string",
+          "description": "Descriptive name of the panel"
+        },
+        "tag": {
+          "type": "string",
+          "description": "Engineering tag / designation"
+        },
+        "location": {
+          "type": "string",
+          "description": "Installation location"
+        },
+        "systemVoltage": {
+          "type": "string",
+          "description": "System voltage configuration"
+        },
+        "mainBreakerAmps": {
+          "type": "integer",
+          "description": "Main circuit breaker current rating in Amperes"
+        },
+        "mainBreakerPoles": {
+          "type": "integer",
+          "description": "Number of poles for main breaker"
+        },
+        "enclosureRows": {
+          "type": "integer",
+          "description": "Number of DIN rail rows in enclosure"
+        },
+        "modulesPerRow": {
+          "type": "integer",
+          "description": "Module capacity per DIN rail row"
+        },
+        "diversityFactor": {
+          "type": "number",
+          "description": "Simultaneity / diversity factor"
+        },
+        "circuits": {
+          "type": "array",
+          "description": "List of circuits installed in the panel"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Engineering notes or specification remarks"
+        },
+        "createdAt": {
+          "type": "integer",
+          "description": "Creation timestamp in milliseconds"
+        },
+        "updatedAt": {
+          "type": "integer",
+          "description": "Last update timestamp in milliseconds"
+        }
+      },
+      "required": ["id", "name"]
+    }
+  },
+  "firestore": {
+    "/panels/{panelId}": {
+      "schema": "Panel",
+      "description": "Collection of electrical distribution panels"
+    }
+  }
+}

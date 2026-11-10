@@ -1,0 +1,6 @@
+{
+  "name": "PanelCraft",
+  "description": "Professional Electrical Panel Designer & Load Calculator with 3-phase balancing, PDF, Excel & Visio export, and AI engineering intelligence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
